@@ -1,58 +1,32 @@
-KATIE BARLOW AUTHOR WEBSITE
-===========================
+const menuButton = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".site-nav");
 
-This is the real starter website for katiebarlowauthor.com.
+menuButton.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(open));
+});
 
-FILES
------
-index.html      Main website content
-styles.css      Colors, layout, mobile design
-script.js       Mobile menu and small interactions
-assets/         Website photographs and artwork
+document.querySelectorAll(".site-nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+  });
+});
 
-BEFORE PUBLISHING
------------------
-1. Open index.html in Notepad.
-2. Search for YOUR-EMAIL-HERE and replace it with your preferred email address.
-3. Search for:
-      Replace # with your real Amazon book link
-   and replace the # in href="#" with your real Amazon URL.
-4. Do the same for Barnes & Noble.
-5. Save index.html.
+document.getElementById("year").textContent = new Date().getFullYear();
 
-HOW TO PREVIEW IT
------------------
-Double-click index.html. It will open in your web browser.
+document.getElementById("contactForm").addEventListener("submit", event => {
+  event.preventDefault();
 
-HOW TO UPLOAD TO GITHUB
------------------------
-1. Open your katiebarlowauthor repository.
-2. Click Add file.
-3. Click Upload files.
-4. Open this extracted folder.
-5. Drag ALL of these items into GitHub:
-      index.html
-      styles.css
-      script.js
-      assets folder
-6. At the bottom, type:
-      Add real author website
-7. Click Commit changes.
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const organization = document.getElementById("organization").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-IMPORTANT
----------
-Upload the contents of this folder, not the ZIP file itself.
-The assets folder must remain named "assets".
+  const subject = encodeURIComponent(`Website inquiry from ${name}`);
+  const body = encodeURIComponent(
+    `Name: ${name}\nEmail: ${email}\nOrganization: ${organization || "Not provided"}\n\n${message}`
+  );
 
-NEXT: TURN ON GITHUB PAGES
---------------------------
-Repository Settings > Pages
-Source: Deploy from a branch
-Branch: main
-Folder: /(root)
-Click Save.
-
-Your temporary website will be:
-https://kbarlow0126.github.io/katiebarlowauthor/
-
-After that works, connect katiebarlowauthor.com through Namecheap.
+  window.location.href = `mailto:YOUR-EMAIL-HERE?subject=${subject}&body=${body}`;
+});

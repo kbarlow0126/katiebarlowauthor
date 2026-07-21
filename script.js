@@ -1,32 +1,42 @@
-const menuButton = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".site-nav");
+const menuButton = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.primary-nav');
 
-menuButton.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", String(open));
+menuButton?.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded', String(isOpen));
 });
 
-document.querySelectorAll(".site-nav a").forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuButton.setAttribute("aria-expanded", "false");
+document.querySelectorAll('.primary-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuButton?.setAttribute('aria-expanded', 'false');
   });
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
-document.getElementById("contactForm").addEventListener("submit", event => {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const organization = document.getElementById("organization").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  const subject = encodeURIComponent(`Website inquiry from ${name}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nOrganization: ${organization || "Not provided"}\n\n${message}`
-  );
-
-  window.location.href = `mailto:YOUR-EMAIL-HERE?subject=${subject}&body=${body}`;
+document.querySelectorAll('.placeholder-link').forEach(link => {
+  link.addEventListener('click', event => {
+    if (link.getAttribute('href') === '#') {
+      event.preventDefault();
+      alert('This button is ready for your real purchase link.');
+    }
+  });
 });
+
+const revealTargets = document.querySelectorAll(
+  '.section-heading, .book-layout, .about-layout, .stanley-copy, .church-image, .visit-card, .activity-card, .events-box, .contact-box'
+);
+
+revealTargets.forEach(item => item.classList.add('reveal'));
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+revealTargets.forEach(item => observer.observe(item));

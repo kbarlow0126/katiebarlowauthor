@@ -1,0 +1,1 @@
+Replaced the original abstract butterfly with a detailed monarch butterfly. It now travels across the entire browser window throughout the whole site, not only the hero image.

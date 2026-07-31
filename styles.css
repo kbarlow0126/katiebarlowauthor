@@ -85,39 +85,47 @@
 }
 
 
-/* Gentle monarch butterfly animation in the homepage hero */
+/* Realistic monarch butterfly that travels across the entire site */
 .floating-butterfly{
-  position:absolute;
-  z-index:3;
-  top:25%;
-  left:57%;
-  width:74px;
-  height:56px;
+  position:fixed;
+  z-index:999;
+  top:0;
+  left:0;
+  width:92px;
+  height:62px;
   pointer-events:none;
-  filter:drop-shadow(0 7px 8px rgba(20,36,31,.26));
-  animation:butterfly-flight 18s ease-in-out infinite;
-  transform-origin:center;
+  filter:drop-shadow(0 7px 7px rgba(31,24,16,.28));
+  animation:monarch-flight 26s linear infinite;
+  will-change:transform;
 }
 .floating-butterfly svg{width:100%;height:100%;overflow:visible}
-.floating-butterfly .butterfly-body{transform-origin:60px 45px;animation:butterfly-bob 2.8s ease-in-out infinite}
-.floating-butterfly .wing{fill:#e87722;stroke:#20170f;stroke-width:3}
-.floating-butterfly .wing-mark{fill:none;stroke:#f5c04c;stroke-width:3;stroke-dasharray:5 5}
-.floating-butterfly .body{fill:#21180f}
-.floating-butterfly .antenna{fill:none;stroke:#21180f;stroke-width:2;stroke-linecap:round}
-.floating-butterfly .wing-left{transform-origin:58px 45px;animation:wing-left .42s ease-in-out infinite alternate}
-.floating-butterfly .wing-right{transform-origin:62px 45px;animation:wing-right .42s ease-in-out infinite alternate}
-@keyframes butterfly-flight{
-  0%,100%{transform:translate(0,0) rotate(-7deg) scale(.95)}
-  18%{transform:translate(46px,-26px) rotate(8deg) scale(1)}
-  38%{transform:translate(12px,25px) rotate(-4deg) scale(.93)}
-  62%{transform:translate(74px,14px) rotate(10deg) scale(1.02)}
-  82%{transform:translate(30px,-18px) rotate(-8deg) scale(.97)}
+.monarch{transform-origin:90px 66px;animation:monarch-bob 1.8s ease-in-out infinite}
+.left-wing,.right-wing{transform-box:fill-box;transform-origin:center center}
+.left-wing{animation:left-flap .34s ease-in-out infinite alternate}
+.right-wing{animation:right-flap .34s ease-in-out infinite alternate}
+.wing-orange{fill:#f27622}
+.wing-black{fill:none;stroke:#18130f;stroke-width:8;stroke-linejoin:round}
+.vein{fill:none;stroke:#18130f;stroke-width:3.4;stroke-linecap:round}
+.spots{fill:#fff8df;stroke:#18130f;stroke-width:1}
+.body,.head{fill:#17120f}
+.antenna{fill:none;stroke:#17120f;stroke-width:2.5;stroke-linecap:round}
+@keyframes monarch-flight{
+  0%{transform:translate(-120px,12vh) rotate(8deg) scale(.88)}
+  12%{transform:translate(18vw,24vh) rotate(-8deg) scale(1)}
+  25%{transform:translate(42vw,10vh) rotate(10deg) scale(.93)}
+  38%{transform:translate(72vw,34vh) rotate(-5deg) scale(1.03)}
+  50%{transform:translate(102vw,18vh) rotate(8deg) scale(.9)}
+  50.01%{transform:translate(102vw,70vh) rotate(188deg) scale(.9)}
+  62%{transform:translate(74vw,58vh) rotate(176deg) scale(1)}
+  75%{transform:translate(46vw,82vh) rotate(190deg) scale(.94)}
+  88%{transform:translate(15vw,62vh) rotate(176deg) scale(1.02)}
+  100%{transform:translate(-120px,76vh) rotate(188deg) scale(.88)}
 }
-@keyframes butterfly-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes wing-left{from{transform:rotateY(0deg)}to{transform:rotateY(57deg)}}
-@keyframes wing-right{from{transform:rotateY(0deg)}to{transform:rotateY(-57deg)}}
-@media(max-width:900px){.floating-butterfly{left:auto;right:18%;top:24%;width:64px}}
-@media(max-width:560px){.floating-butterfly{right:9%;top:38%;width:54px;opacity:.92}}
+@keyframes monarch-bob{0%,100%{translate:0 0}50%{translate:0 -9px}}
+@keyframes left-flap{from{transform:perspective(240px) rotateY(0deg)}to{transform:perspective(240px) rotateY(58deg)}}
+@keyframes right-flap{from{transform:perspective(240px) rotateY(0deg)}to{transform:perspective(240px) rotateY(-58deg)}}
+@media(max-width:700px){.floating-butterfly{width:72px;height:50px;animation-duration:22s}}
+@media(prefers-reduced-motion:reduce){.floating-butterfly{display:none}}
 
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.menu-toggle{display:block}.primary-nav{position:absolute;left:1rem;right:1rem;top:74px;display:none;flex-direction:column;align-items:stretch;padding:1rem;background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.primary-nav.open{display:flex}.primary-nav a{padding:.7rem}.hero{min-height:620px;background-position:62% center}.hero-overlay{background:linear-gradient(90deg,rgba(255,250,240,.98),rgba(255,250,240,.87) 68%,rgba(255,250,240,.35))}.book-grid,.about-grid,.stanley-grid,.milo-grid{grid-template-columns:1fr}.card-grid.three{grid-template-columns:1fr}.book-copy,.about-copy,.stanley-copy,.milo-copy{text-align:center}.button-row{justify-content:center}.tag-row{justify-content:center}.stanley-art{order:-1}.footer-inner{justify-content:center;text-align:center}}

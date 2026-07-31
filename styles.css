@@ -84,7 +84,42 @@
   .event-date strong{font-size:2.2rem}
 }
 
+
+/* Gentle monarch butterfly animation in the homepage hero */
+.floating-butterfly{
+  position:absolute;
+  z-index:3;
+  top:25%;
+  left:57%;
+  width:74px;
+  height:56px;
+  pointer-events:none;
+  filter:drop-shadow(0 7px 8px rgba(20,36,31,.26));
+  animation:butterfly-flight 18s ease-in-out infinite;
+  transform-origin:center;
+}
+.floating-butterfly svg{width:100%;height:100%;overflow:visible}
+.floating-butterfly .butterfly-body{transform-origin:60px 45px;animation:butterfly-bob 2.8s ease-in-out infinite}
+.floating-butterfly .wing{fill:#e87722;stroke:#20170f;stroke-width:3}
+.floating-butterfly .wing-mark{fill:none;stroke:#f5c04c;stroke-width:3;stroke-dasharray:5 5}
+.floating-butterfly .body{fill:#21180f}
+.floating-butterfly .antenna{fill:none;stroke:#21180f;stroke-width:2;stroke-linecap:round}
+.floating-butterfly .wing-left{transform-origin:58px 45px;animation:wing-left .42s ease-in-out infinite alternate}
+.floating-butterfly .wing-right{transform-origin:62px 45px;animation:wing-right .42s ease-in-out infinite alternate}
+@keyframes butterfly-flight{
+  0%,100%{transform:translate(0,0) rotate(-7deg) scale(.95)}
+  18%{transform:translate(46px,-26px) rotate(8deg) scale(1)}
+  38%{transform:translate(12px,25px) rotate(-4deg) scale(.93)}
+  62%{transform:translate(74px,14px) rotate(10deg) scale(1.02)}
+  82%{transform:translate(30px,-18px) rotate(-8deg) scale(.97)}
+}
+@keyframes butterfly-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes wing-left{from{transform:rotateY(0deg)}to{transform:rotateY(57deg)}}
+@keyframes wing-right{from{transform:rotateY(0deg)}to{transform:rotateY(-57deg)}}
+@media(max-width:900px){.floating-butterfly{left:auto;right:18%;top:24%;width:64px}}
+@media(max-width:560px){.floating-butterfly{right:9%;top:38%;width:54px;opacity:.92}}
+
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.menu-toggle{display:block}.primary-nav{position:absolute;left:1rem;right:1rem;top:74px;display:none;flex-direction:column;align-items:stretch;padding:1rem;background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.primary-nav.open{display:flex}.primary-nav a{padding:.7rem}.hero{min-height:620px;background-position:62% center}.hero-overlay{background:linear-gradient(90deg,rgba(255,250,240,.98),rgba(255,250,240,.87) 68%,rgba(255,250,240,.35))}.book-grid,.about-grid,.stanley-grid,.milo-grid{grid-template-columns:1fr}.card-grid.three{grid-template-columns:1fr}.book-copy,.about-copy,.stanley-copy,.milo-copy{text-align:center}.button-row{justify-content:center}.tag-row{justify-content:center}.stanley-art{order:-1}.footer-inner{justify-content:center;text-align:center}}
 @media(max-width:560px){.section{padding:4.5rem 0}.hero{min-height:670px;background-position:68% center}.hero-overlay{background:linear-gradient(180deg,rgba(255,250,240,.97) 0%,rgba(255,250,240,.84) 56%,rgba(255,250,240,.25) 100%)}h1{font-size:3.05rem}.button{width:100%}.contact-box{padding:2rem 1rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.button{transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.button{transition:none}.floating-butterfly,.floating-butterfly .butterfly-body,.floating-butterfly .wing-left,.floating-butterfly .wing-right{animation:none}.floating-butterfly{transform:translate(0,0) rotate(-5deg)}}

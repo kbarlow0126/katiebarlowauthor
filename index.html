@@ -3,15 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Katie Barlow is a children's author from Virginia's Shenandoah Valley, writing warm stories about curiosity, kindness, friendship, and adventure.">
+  <meta name="description" content="Katie Barlow is a children's author from Virginia's Shenandoah Valley and author of The Boy with Red Hair.">
   <meta name="theme-color" content="#17395f">
-  <meta property="og:title" content="Katie Barlow | Children's Author">
-  <meta property="og:description" content="Stories inspired by curiosity, kindness, and the Shenandoah Valley.">
-  <meta property="og:image" content="stanley-hero.png">
   <title>Katie Barlow | Children's Author</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,15 +17,15 @@
         <span class="brand-name">Katie Barlow</span>
         <span class="brand-tag">Children's Author</span>
       </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
         <span></span><span></span><span></span>
-        <span class="sr-only">Open navigation</span>
       </button>
       <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
-        <a href="#book">The Book</a>
+        <a href="#book">Book</a>
         <a href="#about">About</a>
         <a href="#visits">School Visits</a>
         <a href="#activities">Activities</a>
+        <a href="#milo">Meet Milo</a>
         <a href="#events">Events</a>
         <a class="nav-button" href="#contact">Contact</a>
       </nav>
@@ -41,167 +35,182 @@
   <main id="main">
     <section id="home" class="hero">
       <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">Welcome to Stanley, Virginia</p>
-        <h1>Stories inspired by curiosity, kindness, and the Shenandoah Valley.</h1>
-        <p class="hero-copy">Step into a warm storybook world where quiet moments become adventures and every child has a story worth telling.</p>
+      <div class="hero-content shell">
+        <p class="eyebrow">Welcome to Stanley</p>
+        <h1>Stories rooted in kindness, curiosity, and home.</h1>
+        <p class="hero-copy">Step into the Shenandoah Valley, where quiet afternoons, unexpected friendships, and little adventures become unforgettable stories.</p>
         <div class="button-row">
           <a class="button button-primary" href="#book">Discover the Book</a>
-          <a class="button button-secondary" href="#visits">Book a School Visit</a>
+          <a class="button button-light" href="#visits">Book a School Visit</a>
         </div>
       </div>
-      <a class="scroll-cue" href="#book" aria-label="Scroll to featured book">Explore <span aria-hidden="true">↓</span></a>
     </section>
 
-    <section class="story-ribbon" aria-label="Introduction">
-      <p>Come sit by the pond, meet a few unforgettable friends, and discover the wonder waiting in Stanley.</p>
+    <section class="story-strip">
+      <p>Heartwarming stories for children, families, classrooms, and anyone who still believes wonder can be found close to home.</p>
     </section>
 
-    <section id="book" class="section featured-book">
-      <div class="book-grid">
+    <section id="book" class="section section-paper">
+      <div class="shell book-grid">
         <div class="book-art reveal">
-          <div class="book-glow"></div>
           <img src="the-boy-with-red-hair-cover.png" alt="Cover of The Boy with Red Hair by Katie Barlow">
         </div>
         <div class="book-copy reveal">
           <p class="eyebrow">Featured Book</p>
-          <h2><em>The Boy with Red Hair</em></h2>
-          <p class="book-lead">A gentle story about fishing, friendship, patience, and discovering that sometimes the best part is the waiting.</p>
-          <p>Meet Cole, a curious boy with bright red hair, a love of fishing, and a gift for noticing the small wonders around him. Set beside a peaceful pond in Stanley, Virginia, this heartwarming picture book celebrates quiet moments and unexpected friendship.</p>
-          <div class="book-facts" aria-label="Book details">
-            <span>Ages 4–8</span><span>Read-aloud favorite</span><span>Shenandoah Valley setting</span>
-          </div>
+          <h2>The Boy with Red Hair</h2>
+          <p class="lead">Meet Cole, a curious boy with bright red hair, a love of fishing, and a gift for noticing the small wonders around him.</p>
+          <p>Set beside a peaceful pond in Stanley, Virginia, this warm picture book celebrates patience, friendship, and the joy of slowing down long enough to notice what matters.</p>
+          <ul class="check-list">
+            <li>Perfect for children ages 4–8</li>
+            <li>A cozy read-aloud for home, school, or library</li>
+            <li>Inspired by Virginia's Shenandoah Valley</li>
+          </ul>
           <div class="button-row">
-            <a class="button button-primary" href="https://www.barnesandnoble.com/w/the-boy-with-red-hair-katie-barlow/1150793815?ean=9798996908837" target="_blank" rel="noopener">Order from Barnes &amp; Noble</a>
-            <a class="text-link" href="#visits">Bring Katie to your school <span aria-hidden="true">→</span></a>
+            <a class="button button-primary" href="https://www.barnesandnoble.com/w/the-boy-with-red-hair-katie-barlow/1150793815?ean=9798996908837" target="_blank" rel="noopener">Order Hardcover from Barnes &amp; Noble</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section about-section">
-      <div class="about-grid">
-        <div class="portrait-card reveal">
+    <section id="about" class="section section-warm">
+      <div class="shell about-grid">
+        <div class="portrait reveal">
           <img src="katie-barlow-headshot.jpg" alt="Katie Barlow, children's author">
-          <div class="portrait-caption">Author • Mom • Shenandoah Valley storyteller</div>
         </div>
         <div class="about-copy reveal">
           <p class="eyebrow">Meet Katie</p>
-          <h2>Stories inspired by home, family, and small-town wonder.</h2>
-          <p>Katie Barlow is a children's author who writes warm, imaginative stories filled with friendship, curiosity, and adventure.</p>
-          <p>Her work is inspired by Virginia's Shenandoah Valley, the town of Stanley, and the unforgettable moments that make childhood special. When she is not writing, Katie enjoys time with her two boys, serving her community, and dreaming up the next story.</p>
+          <h2>Writing stories inspired by family, home, and small-town wonder.</h2>
+          <p>Katie Barlow is a children's author from Virginia's Shenandoah Valley. Her stories are rooted in kindness, curiosity, friendship, and the unforgettable moments that make childhood special.</p>
+          <p>When she is not writing, Katie works in human resources, serves her community, and spends time with her two sons. She hopes her books encourage children to slow down, look closely, and believe their own ideas are worth sharing.</p>
           <a class="text-link" href="#contact">Connect with Katie <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
 
-    <section class="stanley-section">
-      <div class="stanley-copy reveal">
-        <p class="eyebrow">The World of Stanley</p>
-        <h2>A familiar little town where every path can lead to a story.</h2>
-        <p>The pond, church, water tower, mountains, and great old oak tree create a storybook home children can return to again and again.</p>
-        <div class="stanley-tags" aria-label="Stanley story elements">
-          <span>The Pond</span><span>The Church</span><span>The Water Tower</span><span>The Big Oak</span><span>The Mountains</span>
+    <section class="section stanley-section">
+      <div class="shell stanley-grid">
+        <div class="stanley-copy reveal">
+          <p class="eyebrow">The World of Stanley</p>
+          <h2>A familiar little town where every path can lead to a story.</h2>
+          <p>The church, water tower, pond, mountains, and great old oak tree create a place children can return to again and again.</p>
+          <div class="tag-row" aria-label="Stanley story elements">
+            <span>The Pond</span><span>The Church</span><span>The Water Tower</span><span>The Big Tree</span><span>The Mountains</span>
+          </div>
+        </div>
+        <div class="stanley-art reveal">
+          <img src="stanley-church-guide.png" alt="Storybook illustration of Stanley United Methodist Church">
         </div>
       </div>
-      <div class="church-frame reveal">
-        <img src="stanley-church-guide.png" alt="Storybook illustration inspired by Stanley United Methodist Church">
+    </section>
+
+    <section id="visits" class="section section-navy">
+      <div class="shell">
+        <div class="section-heading light reveal">
+          <p class="eyebrow">School &amp; Library Visits</p>
+          <h2>Bring the story to your young readers.</h2>
+          <p>Katie offers warm, interactive visits for elementary schools, libraries, bookstores, family literacy nights, and community events.</p>
+        </div>
+        <div class="card-grid three">
+          <article class="info-card reveal"><span class="card-number">01</span><h3>Interactive Read-Aloud</h3><p>A lively reading of <em>The Boy with Red Hair</em> with opportunities for children to notice details, answer questions, and join the conversation.</p></article>
+          <article class="info-card reveal"><span class="card-number">02</span><h3>Behind the Book</h3><p>A child-friendly look at how an idea becomes a finished book—from inspiration and writing to illustration and publishing.</p></article>
+          <article class="info-card reveal"><span class="card-number">03</span><h3>Young Writer Encouragement</h3><p>A fun conversation about imagination, making mistakes, and believing every child has a story worth telling.</p></article>
+        </div>
+        <div class="centered-action reveal"><a class="button button-rust" href="mailto:kbarlow0126@gmail.com?subject=School%20Visit%20Inquiry">Request a School Visit</a></div>
       </div>
     </section>
 
-    <section id="visits" class="section visits-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">School &amp; Library Visits</p>
-        <h2>Bring a memorable author experience to your young readers.</h2>
-        <p>Katie offers engaging visits for elementary schools, libraries, family literacy nights, bookstores, and community events.</p>
-      </div>
-      <div class="visit-grid">
-        <article class="visit-card reveal"><span class="card-number">01</span><h3>Interactive Read-Aloud</h3><p>A lively reading with opportunities for children to notice hidden details, answer questions, and participate in the story.</p></article>
-        <article class="visit-card reveal"><span class="card-number">02</span><h3>Behind the Book</h3><p>A child-friendly look at how an idea becomes a finished book—from the first spark to writing, illustrating, and publishing.</p></article>
-        <article class="visit-card reveal"><span class="card-number">03</span><h3>Young Writer Workshop</h3><p>An encouraging conversation and activity about imagination, making mistakes, and believing every child has a story worth telling.</p></article>
-      </div>
-      <div class="visit-cta reveal">
-        <div><h3>Planning a school, library, or community event?</h3><p>Let's create a visit that fits your readers and your schedule.</p></div>
-        <a class="button button-light" href="mailto:kbarlow0126@gmail.com?subject=Author%20Visit%20Inquiry">Request a Visit</a>
+    <section id="activities" class="section section-paper">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Free Activities</p>
+          <h2>Keep the story going.</h2>
+          <p>Printable resources for families, teachers, librarians, and young readers are being added here.</p>
+        </div>
+        <div class="card-grid three">
+          <article class="activity-card reveal"><div class="activity-icon">🎨</div><h3>Coloring Pages</h3><p>Printable pages featuring Cole, Milo, and scenes from Stanley.</p><span class="badge">Coming soon</span></article>
+          <article class="activity-card reveal"><div class="activity-icon">🔎</div><h3>Find Milo</h3><p>A playful hidden-character activity for classrooms and reading events.</p><span class="badge">Coming soon</span></article>
+          <article class="activity-card reveal"><div class="activity-icon">✏️</div><h3>Young Author Journal</h3><p>A simple journal to help children draw, imagine, and begin their own stories.</p><span class="badge">Coming soon</span></article>
+        </div>
       </div>
     </section>
 
-    <section id="activities" class="section activities-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Free Activities</p>
-        <h2>Keep the story going.</h2>
-        <p>Printable resources for families, classrooms, libraries, and school visits are on the way.</p>
-      </div>
-      <div class="activity-grid">
-        <article class="activity-card reveal"><span class="activity-icon" aria-hidden="true">✎</span><h3>Coloring Pages</h3><p>Printable scenes featuring Cole, Milo, and familiar places around Stanley.</p><span class="status">Coming soon</span></article>
-        <article class="activity-card reveal"><span class="activity-icon" aria-hidden="true">⌕</span><h3>Find Milo</h3><p>A playful hidden-character challenge for children, classrooms, and reading events.</p><span class="status">Coming soon</span></article>
-        <article class="activity-card reveal"><span class="activity-icon" aria-hidden="true">★</span><h3>Young Author Journal</h3><p>A simple writing and drawing booklet designed to encourage children to create their own stories.</p><span class="status">Coming soon</span></article>
-      </div>
-    </section>
-
-    <section class="milo-section">
-      <div class="milo-wrap">
+    <section id="milo" class="section section-warm">
+      <div class="shell milo-grid">
         <div class="milo-art reveal">
-          <img src="milo-character.png" alt="Milo, a small gray mouse with round gold glasses and a red bow tie">
+          <img src="milo-character.png" alt="Milo, a gray mouse with glasses, a red bow tie, and a brass key">
         </div>
-        <div class="milo-card reveal">
+        <div class="milo-copy reveal">
           <p class="eyebrow">Coming Next</p>
           <h2>Meet Milo</h2>
-          <p>A tiny mouse, a very messy room, and an unexpected friendship are at the heart of Katie's next story.</p>
-          <span class="milo-note">More details coming soon.</span>
+          <p class="lead">A tiny mouse. A very messy room. And the beginning of an unexpected friendship.</p>
+          <p>Katie's next story returns to Cole's world and introduces Milo, a clever little collector with a big personality and an even bigger heart.</p>
+          <span class="badge large">Coming soon</span>
         </div>
       </div>
     </section>
+
 
     <section id="events" class="section events-section">
-      <div class="events-card reveal">
-        <div>
-          <p class="eyebrow">Events</p>
-          <h2>See where Katie will be next.</h2>
-          <p>Book signings, school visits, library programs, and community appearances will be shared here.</p>
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Upcoming Events</p>
+          <h2>Meet Katie in person.</h2>
+          <p>Join Katie for a meet-the-author event featuring <em>The Boy with Red Hair</em>.</p>
         </div>
-        <div class="empty-event"><strong>No public events listed yet.</strong><span>Check back soon or follow Katie on Instagram for updates.</span></div>
-      </div>
-    </section>
 
-    <section class="social-section">
-      <div class="social-copy reveal">
-        <p class="eyebrow">Behind the Stories</p>
-        <h2>Follow along on Instagram.</h2>
-        <p>See book updates, illustration peeks, author events, and a little bit of life in the Shenandoah Valley.</p>
-        <a class="button button-outline" href="https://www.instagram.com/katiebarlowauthor/" target="_blank" rel="noopener">@katiebarlowauthor</a>
+        <div class="events-grid">
+          <article class="event-card reveal">
+            <div class="event-date" aria-label="September 19, 2026">
+              <span class="event-month">SEP</span>
+              <strong>19</strong>
+              <span>2026</span>
+            </div>
+            <div class="event-details">
+              <p class="event-label">Meet the Author</p>
+              <h3>Bill Kibler Memorial Library</h3>
+              <p><strong>Saturday, September 19, 2026</strong><br>10:00 AM–1:00 PM</p>
+              <p>140 E Main St<br>Stanley, VA 22851</p>
+            </div>
+          </article>
+
+          <article class="event-card reveal">
+            <div class="event-date" aria-label="October 3, 2026">
+              <span class="event-month">OCT</span>
+              <strong>3</strong>
+              <span>2026</span>
+            </div>
+            <div class="event-details">
+              <p class="event-label">Meet the Author</p>
+              <h3>Shenandoah Museum</h3>
+              <p><strong>Saturday, October 3, 2026</strong><br>2:00 PM</p>
+              <p>507 First St<br>Shenandoah, VA 22849</p>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="social-tiles reveal" aria-hidden="true"><span>Books</span><span>Stanley</span><span>School Visits</span><span>Coming Soon</span></div>
     </section>
 
     <section id="contact" class="section contact-section">
-      <div class="contact-grid">
-        <div class="contact-copy reveal">
-          <p class="eyebrow">Contact</p>
-          <h2>I'd love to hear from you.</h2>
-          <p>For school visits, library programs, bookstore events, community appearances, or general questions, send Katie a note.</p>
-          <div class="button-row">
-            <a class="button button-light" href="mailto:kbarlow0126@gmail.com">Email Katie</a>
-            <a class="button button-ghost" href="https://www.instagram.com/katiebarlowauthor/" target="_blank" rel="noopener">Instagram</a>
-          </div>
-        </div>
-        <div class="newsletter-card reveal">
-          <p class="eyebrow">Story Notes</p>
-          <h3>Join the mailing list</h3>
-          <p>Newsletter signup is being prepared. Until then, email Katie with the subject “Story Notes” to be added to the update list.</p>
-          <a class="button button-primary" href="mailto:kbarlow0126@gmail.com?subject=Story%20Notes%20Mailing%20List">Join Story Notes</a>
+      <div class="shell contact-box reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>I'd love to hear from you.</h2>
+        <p>For school visits, library programs, bookstore events, media inquiries, or a simple hello, reach out anytime.</p>
+        <div class="button-row centered">
+          <a class="button button-primary" href="mailto:kbarlow0126@gmail.com">Email Katie</a>
+          <a class="button button-outline" href="https://www.instagram.com/katiebarlowauthor/" target="_blank" rel="noopener">Follow on Instagram</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div><span class="footer-name">Katie Barlow</span><span class="footer-tag">Children's Author</span></div>
-      <nav class="footer-nav" aria-label="Footer navigation"><a href="#book">Book</a><a href="#about">About</a><a href="#visits">Visits</a><a href="#contact">Contact</a></nav>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><strong>Katie Barlow</strong><span>Children's Author</span></div>
+      <p>Stories from the heart of Stanley, Virginia.</p>
       <p>© <span id="year"></span> Katie Barlow. All rights reserved.</p>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

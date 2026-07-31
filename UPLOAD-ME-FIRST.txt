@@ -1,0 +1,21 @@
+KATIE'S WEBSITE — SIMPLE UPLOAD GUIDE
+
+This folder contains the finished redesigned website.
+
+IMPORTANT:
+Upload the individual files inside this folder to GitHub.
+Do not upload this ZIP file itself.
+
+The website includes:
+- Redesigned homepage
+- Barnes & Noble hardcover purchase button
+- Featured book section
+- About Katie section
+- School and library visits
+- Free activities placeholders
+- Meet Milo preview
+- Events section
+- Instagram and contact links
+- Mobile-friendly layout
+
+Your custom domain is preserved in the CNAME file.
